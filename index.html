@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <title>T2T</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/bashojaaye.css" rel="stylesheet">
+	<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">T2T</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#Testimonials">About Us <span class="sr-only">(current)</span></a>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Destinations
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="lob.html">Beaches</a>
+          <a class="dropdown-item" href="lob.html">Hill Station</a>
+    
+          <a class="dropdown-item" href="lob.html">Camping</a>
+        </div>
+      </li>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" href="kyu.html">Bookings</a>
+      </li>
+       </ul>
+      
+     
+	<div class="form-group">
+		 <button class="btn btn-primary my-2 my-sm-0" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate"  method="POST" action="enter.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+    </div>
+
+    <div class="container">
+      <label for="user"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="user" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+      <button type="submit" name="login_user">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+	</div>
+	<div class="form-group">
+			   
+			   <button class="btn btn-primary my-2 my-sm-0 " onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form  class="modal-content animate" name= "t2t" method="POST" action="demo.php">
+      <div class="container">
+  <label for="first"><b>First Name</b></label>
+        <input type="text" placeholder="First Name" name="first" REQUIRED pattern="[a-zA-Z][a-zA-Z]{2,}" title="Only letters allowed"><br><br>
+		<label for="last"><b>Last Name</b></label>
+        <input type="text" placeholder="Last Name" name="last" REQUIRED pattern="[a-zA-Z][a-zA-Z]{2,}" title="Only letters allowed"><br><br>
+		<label for="user"><b>Username</b></label>
+        <input type="text" placeholder="Username" name="user" REQUIRED  pattern="[a-zA-Z][a-z0-9]{2,10}" title="Only letters and atleast one number is to be included"><br>
+        <label for="password"><b>Password</b></label>
+		<input type="password" placeholder="Password" name="password" REQUIRED><br>
+		<label for="cpassword"><b> Confirm Password</b></label>
+        <input type="password" placeholder="Confirm Password" name="cpassword" REQUIRED><br>
+		<label for="dt"><b>DOB</b></label>&nbsp;&nbsp;
+        <input type="date" placeholder="MM/DD/YYYY" name="dt" REQUIRED><br>
+       <!--  Gender<br><input type="radiobutton" name="RD" value="Male">Male<br><input type="radiobutton" name="RD" value="Male">Female<br><input type="radiobutton" name="RD" value="Male">Other<br> -->
+        <label for="Select"><b>Select Your City</b></label>
+		<select name="dropdown" placeholder="City" value="select">
+          <option selected="hidden">Select your City</option>
+          <option>Mumbai</option>
+          <option>Thane</option>
+          <option>Delhi</option>
+          <option>Kolkata</option>
+          <option>Chennai</option>
+          <option>Jaipur</option>
+          <option>Bhopal</option>
+          <option>Chandigarh</option>
+        </select><br><br>
+		<label for="contact"><b>Contact No.</b></label>
+        <input type="number" placeholder="Contact No." name="contact" REQUIRED pattern="[0-9][0-9]{9}" title="Enter 10 numbers only"><br><br>
+		<label for="email"><b>E-mail</b></label>
+        <input type="email"  placeholder="E-mail" name="email" REQUIRED><br><br>
+		<label for="address"><b>address</b></label>
+        <input type="textarea" placeholder="Address" name="address" row="3" REQUIRED><br><br>
+        <center><button type="submit" class="btn btn-pri" name="submit" onclick="CheckPassword(document.t2t.password)">Sign me up!</button></center>
+        </div>
+		<button class="btn btn-danger" value='Reset' name='reset' onclick="return resetForm(this.form);">Reset</button>
+      </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+function resetForm(form) {
+    // clearing inputs
+    var inputs = form.getElementsByTagName('input');
+    for (var i = 0; i<inputs.length; i++) {
+        switch (inputs[i].type) {
+            // case 'hidden':
+            case 'text':
+                inputs[i].value = '';
+                break;
+            case 'radio':
+            case 'checkbox':
+                inputs[i].checked = false;   
+        }
+    }
+
+    // clearing selects
+    var selects = form.getElementsByTagName('select');
+    for (var i = 0; i<selects.length; i++)
+        selects[i].selectedIndex = 0;
+
+    // clearing textarea
+    var text= form.getElementsByTagName('textarea');
+    for (var i = 0; i<text.length; i++)
+        text[i].innerHTML= '';
+
+    return false;
+}
+</script>
+
+	</div>
+		<div class="form-group">
+		 <button class="btn btn-light my-2 my-sm-0" onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Feedback</button>
+
+<div id="id03" class="modal">
+  
+  <form method="POST" class="modal-content animate" action="feedback.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+    </div>
+
+    <div class="container">
+	<center><h3>Feedback!!<br></h3></center>
+      <label for="email"><b>E-mail</b></label><br>
+      <input type="email" placeholder="Enter e-mail id" name="email" required><br><br>
+
+      <label for="rate"><b>Rate Us Out Of 5</b></label><br>
+      <select name="rate" required>
+							<option value="">Rating</option>
+							<option value="2">1</option>
+							<option value="3">2</option>
+							<option value="4">3</option>
+							<option value="5">4</option>
+							<option value="6">5</option>
+						</select><br>
+		<label for="sugg"><b>Any Suggestions or Grivences</b></label><br>
+      <input type="text" placeholder="" name="sugg" required><br><br>
+      <button type="submit">Submit</button>
+ 
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id03');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+	</div>
+	
+    
+	  
+
+    </form>      
+  </div>
+</nav>
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Discover Your Dream Destinations!!</h1>
+          </div>
+          <div class="container-fluid container-constrain">
+            <form>
+              <div class="form-row">
+                <div class="col-md-4">
+                  <input type="email" class="form-control form-control-lg" placeholder="Where to go?" required>
+                </div>
+				
+                <div class="col-md-3">
+                  <input type="datetime" class="form-control form-control-lg" placeholder="Check-in DD/MM/YYYY" required>
+                </div>
+				<div class="col-md-3">
+                  <input type="datetime" class="form-control form-control-lg" placeholder="Check-out DD/MM/YYYY" required>
+                </div>
+                <div class="col-md-2">
+                  <a href="kyu.html" class="btn btn-block btn-lg btn-primary">Submit</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <img src="img/beach1.jpg" class="img-circle" alt="Cinque Terre" width="300" height="300">
+              </div>
+			  <div>
+              <a href="lob.html"><h3>Beach</h3></a>
+              <p class="lead mb-0">Dive into a one-of-a-kind, unbelievably exciting Beach Vacation</p>
+            </div>
+			</div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <img src="img/hs1.jpg" class="img-circle" alt="Cinque Terre" width="300" height="300">
+              </div>
+              <a href="lob.html"><h3>Hill Station</h3></a>
+              <p class="lead mb-0">Are you looking for the best hill stations in India for a romantic vacation?</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+               <img src="img/camping1.jpg" class="img-circle" alt="Cinque Terre" width="300" height="300"> 
+              </div>
+              <a href="lob.html"><h3>Camping</h3></a>
+              <p class="lead mb-0">A tent is your cheap ticket to wild beauty spots across India, from Spiti Valley to Jaisalmer – with walking, wildlife and stargazing!!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Showcases -->
+    <div id="destinations" class="section-home container-fluid container-constrain">
+  <h3>Trending Destinations</h3>
+  <ul class="list-unstyled row row-condensed-sm-down">
+      <li class="col-xs-6 col-sm-4">
+        <a href="/holiday-homes/singapore" style="background-image: url('https://d2yqmrx4heeh7s.cloudfront.net/search/2d9ad226670eafd1bf40e31366d8ee44.jpg')">
+          <p>Singapore</p>
+        </a>
+      </li>
+      <li class="col-xs-6 col-sm-4">
+        <a href="/holiday-homes/india/goa" style="background-image: url('https://d2yqmrx4heeh7s.cloudfront.net/search/bba6b40920385141ca27c6cca57a240f.jpg')">
+          <p>Goa</p>
+        </a>
+      </li>
+      <li class="col-xs-6 col-sm-4">
+        <a href="/vacation-rentals/thailand/phuket" style="background-image: url('https://d2yqmrx4heeh7s.cloudfront.net/search/5e063df9b9be7b6c4aff67df2f4f6584.jpg')">
+          <p>Phuket</p>
+        </a>
+      </li>
+      <li class="col-xs-10  col-sm-4">
+        <a href="/holiday-homes/united-arab-emirates/dubai" style="background-image: url('https://d2d722jdt4ecsl.cloudfront.net/featured-content/destinations/dubai.jpg')">
+          <p>Dubai</p>
+        </a>
+      </li>
+      <li class="col-xs-10  col-sm-3">
+        <a href="/holiday-homes/thailand/bangkok" style="background-image: url('https://d2yqmrx4heeh7s.cloudfront.net/search/4f94e91d6e8d475135aec46197659b13.jpg')">
+          <p>Bangkok</p>
+        </a>
+      </li>
+      <li class="col-xs-6 col-sm-5">
+        <a href="/holiday-homes/hong-kong" style="background-image: url('https://d2yqmrx4heeh7s.cloudfront.net/search/c45bf321014d6dec781efe6ef50275d8.jpg')">
+          <p>Hong Kong</p>
+        </a>
+      </li>
+      <li class="col-xs-6 col-sm-5">
+        <a href="/vacation-rentals/indonesia/bali/bali" style="background-image: url('https://d2yqmrx4heeh7s.cloudfront.net/search/80bab44c0ffefd227a0779867629e169.jpg')">
+          <p>Bali</p>
+        </a>
+      </li>
+      <li class="col-xs-6 col-sm-5">
+        <a href="/holiday-homes/australia/new-south-wales/sydney" style="background-image: url('https://d2yqmrx4heeh7s.cloudfront.net/search/1870143dca085ca406db71c54531c04d.jpg')">
+          <p>Sydney</p>
+        </a>
+      </li>
+	  <li class="col-xs-6 col-sm-2">
+        <a href="newyork" style="background-image: url('https://s3.amazonaws.com/cme_public_images/www_ehow_com/i.ehow.com/images/a05/6d/bp/statue-liberty-rumors-myths-800x800.jpg')">
+          <p>New York</p>
+        </a>
+      </li>
+  </ul>
+</div>
+
+    <!-- Testimonials -->
+    <section id= "Testimonials" class="testimonials text-center bg-light">
+      <div class="container">
+        <h2 class="mb-5">About Us</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <center></center><img class="img-fluid rounded-circle mb-3" src="img/about.png" alt="">
+              <h5>Harshitha</h5>
+              <p class="font-weight-light mb-0">"Hope this travel website is helpful to you!!"</p></center>
+            </div>
+          </div>
+                    <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="img/about.png" alt="">
+              <h5>Shrinidhi</h5>
+              <p class="font-weight-light mb-0">"It is amazing. You can explore new places."</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="img/about.png" alt="">
+              <h5>Jasmine</h5>
+              <p class="font-weight-light mb-0">"Super awesome!!"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    <!-- Footer -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <ul class="list-inline mb-2">
+              <li class="list-inline-item">
+                <a href="#">About</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Contact</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+            <p class="text-muted small mb-4 mb-lg-0">&copy; T2T Website 2018. All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fa fa-facebook fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fa fa-twitter fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-instagram fa-2x fa-fw"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

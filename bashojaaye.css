@@ -1,0 +1,119 @@
+body{
+font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif}
+h1,h2,h3,h4,h5,h6{
+	font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-weight:700}
+	#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+ .form-group {
+    margin-bottom: 5px;
+	Padding-right: 10px;
+}
+
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+header.masthead{
+	position:relative;
+	background-color:#343a40;
+	background:url('header.jpg') no-repeat center center;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	padding-top:8rem;
+	padding-bottom:8rem}
+header.masthead .overlay{
+		position:absolute;
+		background-color:#212529;
+		height:100%;
+		width:100%;
+		top:0;
+		left:0;
+		opacity:.3}
+header.masthead h1{
+			font-size:2rem}
+@media (min-width:768px){
+	header.masthead{
+		padding-top:12rem;
+		padding-bottom:12rem}
+	    header.masthead h1{
+			font-size:3rem}
+						}
+.showcase .showcase-text{
+		padding:3rem}
+.showcase .showcase-img{
+		min-height:30rem;
+		background-size:cover}
+@media (min-width:768px){
+		.showcase .showcase-text{
+			padding:7rem}
+								}
+.features-icons{
+		padding-top:7rem;
+		padding-bottom:7rem}
+.features-icons .features-icons-item{
+		max-width:20rem}
+.features-icons .features-icons-item .features-icons-icon{
+		height:15rem}
+.features-icons .features-icons-item .features-icons-icon img{
+		padding-bottom:5rem;
+		border-radius:10%}
+.features-icons .features-icons-item:hover .features-icons-icon i{
+		font-size:5rem}
+		#destinations a.bg{-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}@media \0screen{#destinations a.bg{-ms-behavior:url(/assets/backgroundsize.min-fdc3ff7aad604ef0934f1f8e5fe6112f.htc)}}
+		#destinations p{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,0.7)}#destinations li{padding-top:6px;padding-bottom:6px}@media (min-width: 992px){#destinations li{padding-top:12px;padding-bottom:12px}}#destinations a.bg{background-repeat:no-repeat;background-position:center center}#destinations a {opacity:1;-webkit-transition:opacity ease-in-out 0.3s;transition:opacity ease-in-out 0.3s}#destinations a:hover{opacity:0.93}
+		#destinations h3{margin-top:0;margin-bottom:20px;font-size:1.5714285714em;font-weight:bold;text-align:center}@media (min-width: 768px){#destinations h3{font-size:2.2857142857em}}#destinations li{display:table}#destinations a{display:table-cell;height:264px;height:30vw !important;border-radius:4px;text-align:center;vertical-align:middle;font-size:1.2857142857em}@media (min-width: 320px){#destinations a{height:100px}}@media (min-width: 480px){#destinations a{height:140px}}@media (min-width: 640px){#destinations a{height:180px}}@media (min-width: 768px){#destinations a{height:21vw !important;font-size:1.4285714286em}}@media (min-width: 992px){#destinations a{height:200px;font-size:1.5714285714em}}@media (min-width: 1200px){#destinations a{height:264px !important}}#destinations a:hover{text-decoration:none}#destinations p{margin:0 0.8em;font-weight:bold}@media (max-width: 480px){#destinations p{font-size:0.9em}}
+.testimonials{
+		padding-top:7rem;padding-bottom:7rem}
+.testimonials .testimonial-item{
+		max-width:18rem}
+.testimonials .testimonial-item img{
+		max-width:12rem;box-shadow:0 5px 5px 0 #adb5bd}
+.call-to-action{
+		position:relative;
+		background-color:#343a40;
+		background:url(../img/bg-masthead.jpg) no-repeat center center;
+		-webkit-background-size:cover;
+		-moz-background-size:cover;
+		-o-background-size:cover;
+		background-size:cover;
+		padding-top:7rem;
+		padding-bottom:7rem}																	
+.call-to-action .overlay{
+		position:absolute;
+		background-color:#212529;
+		height:100%;
+		width:100%;
+		top:0;
+		left:0;
+		opacity:.3}
+footer.footer{
+	padding-top:4rem;padding-bottom:4rem}

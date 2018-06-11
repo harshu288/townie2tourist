@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <title>T2T/Booking</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+<!-- //custom-theme -->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<link href="done.css" rel="stylesheet" type="text/css" media="all" />
+<link href="//fonts.googleapis.com/css?family=Amaranth:400,400i,700,700i" rel="stylesheet">
+</head>
+<body class="bg agileinfo">
+
+   <h1 class="agile-head text-center">Bookings!! </h1>
+	<div class="container">
+		<div class="form_w3layouts">
+			<form action="book.php" method="post" class="agile_form">
+				
+				<div class="agileits-location">
+					<label>Source</label>
+<select  class= "form-control form-control-lg" name="down" placeholder="From" value="Down">
+          <option selected="hidden">Select your City</option>
+          <option>Mumbai,IN-Chatrapati Shivaji Airport(BOM)</option>
+          <option>Goa,IN-Dabolim Airport(GOI)</option>
+          <option>New Delhi,IN-Indira Gandhi Airport(DEL)</option>
+          <option>Kolkata,IN-Netaji Subhas Chandra Bose Airport(CCU)</option>
+          <option>Chennai,IN-Chennai Airport(MAA)</option>
+          <option>Jaipur,IN-Sanganeer(JAN)</option>
+          <option>Bhopal,IN-Raja Bhoj(BHO)</option>
+          <option>Chandigarh,IN-Chandigarh Airport(IXC)</option>
+        </select><br><br>
+				</div>
+				
+				<div class="agileits-location">
+					<label>Destination</label>
+<select  class= "form-control form-control-lg" name="drop" placeholder="To" value="Down">
+          <option selected="hidden">Select your City</option>
+          <option>Mumbai,IN-Chatrapati Shivaji Airport(BOM)</option>
+          <option>Goa,IN-Dabolim Airport(GOI)</option>
+          <option>New Delhi,IN-Indira Gandhi Airport(DEL)</option>
+          <option>Kolkata,IN-Netaji Subhas Chandra Bose Airport(CCU)</option>
+          <option>Chennai,IN-Chennai Airport(MAA)</option>
+          <option>Jaipur,IN-Sanganeer(JAN)</option>
+          <option>Bhopal,IN-Raja Bhoj(BHO)</option>
+          <option>Chandigarh,IN-Chandigarh Airport(IXC)</option>
+        </select><br><br>
+				</div>
+				<div class="checkin agileits-left">
+					<label>Date of Journey</label><br>
+				    <input placeholder="dd/mm/yyyy" name="date" class="date" id="datepicker" type="date" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required=""/>
+				</div>
+				<!--<div class="checkin agileits-right">
+					<label>Check out</label>
+					<input placeholder="dd/mm/yyyy" class="date" id="datepicker1" type="date" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required=""/>
+		        </div>-->
+				<div class="clear"></div>
+				<!--<div class="agileits-location">
+					<label>Travel Type</label>
+				    <select required>
+						<option value="">select travel type</option>
+						<option value="1">Business Class</option>
+						<option value="2">Premium Economy</option>
+						<option value="3">Cultural Travel</option>
+					</select>
+				</div>-->
+				<div class="section_class_agileits">
+					<div class="section_agileits w3ls-sel2">
+						<select name="nop" required>
+							<option value="">No of Passengers</option>
+							<option value="2">1</option>
+							<option value="3">2</option>
+							<option value="4">3</option>
+							<option value="5">4 or4+</option>
+						</select>
+					</div> 
+					<!--<div class="section_agileits">
+						<select required>
+							<option value="">Children</option>
+							<option value="2">0</option>
+							<option value="3">1</option>
+							<option value="4">2</option>
+							<option value="5">3 or 3+</option>
+						</select>
+					</div>	-->
+					<div class="clear"></div>
+				</div>
+								
+				<div class="clear"></div>
+				  <div class="button"><br>
+          <button type="button" class="btn btn-secondary" onclick="document.getElementById('T3').style.display='block'">Search Flights</button>
+           <br><br><div class="book" id='T3' style='display:none' class="GHI">
+         <select class= "form-control form-control-lg" name="Flights" placeholder="Flights" value="for">
+          <option selected="hidden">Select your Flight</option>
+          <option>Spice Jet(SG612) RATE:2,917/- per person TIME-23:05</option>
+          <option>Go Air(G8384) RATE:3,045/- per person TIME-18:30</option>
+          <option>IndiGo(6E419) RATE:3,683/- per person TIME-10:15</option>
+          <option>AirIndia RATE:3,835/- per person TIME-15:45</option>
+        </select><br><br>
+        <input class="btn btn-secondary" type="submit" name="book" value="Proceed for Booking"><br>
+    </div>
+   </form>		</div>			
+	</div>
+
+</body>
+</html>
+
